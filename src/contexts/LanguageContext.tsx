@@ -1,0 +1,299 @@
+import React, { createContext, useContext } from 'react';
+
+export type Language = 'en' | 'pt';
+
+interface LanguageContextType {
+  language: Language;
+  toggleLanguage: () => void;
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export function useLanguage() {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within LanguageProvider');
+  }
+  return context;
+}
+
+export function LanguageProvider({ children, language, toggleLanguage }: { children: React.ReactNode; language: Language; toggleLanguage: () => void }) {
+  return (
+    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+}
+
+export const translations = {
+  pt: {
+    nav: ['Sobre', 'Experiência', 'Projetos', 'Educação', 'Habilidades', 'Contato'],
+    hero: {
+      title: 'Desenvolvedor Full-Stack · Especialista Back-end · PJ',
+      description: 'Tenho 2 anos de experiência atuando com aplicações que atendem dezenas de milhares de usuários ativamente. Construo sistemas web, desktop e mobile robustos e escaláveis.'
+    },
+    about: {
+      title: 'Sobre',
+      content: [
+        'Engenheiro de software com profundo gosto por lógica de programação e arquitetura robusta. Desde os 16 anos, venho construindo sistemas web, desktop e mobile com JavaScript, TypeScript e C# majoritariamente.',
+        'Experiência abrangente em todo o ciclo de desenvolvimento, incluindo aplicativos multiplataforma, APIs, sistemas internos, automações e infraestrutura cloud.'
+      ]
+    },
+    experience: {
+      title: 'Experiência',
+      items: [
+        {
+          period: 'mar de 2025 — presente',
+          company: 'Lab Cinco',
+          role: 'Analista de Testes / Desenvolvedor - Remoto',
+          description: 'Aplicação de testes em diferentes tipos de sistemas e desenvolvimento de aplicações web e desktop para uso interno da equipe, acelerando e automatizando processos internos.'
+        },
+        {
+          period: 'jul de 2022 — mar de 2025',
+          company: 'Lab Cinco',
+          role: 'Desenvolvedor de Banco de Dados - Híbrido',
+          description: 'Colaborei principalmente com a automação e otimização de processes internos, análise de dados e comportamento de usuários. Desenvolvimento de queries e Stored Procedures. Desenvolvi toda a documentação de um banco de dados que atende mais de 100 mil usuários.'
+        },
+        {
+          period: 'mai de 2021 — jul de 2022',
+          company: 'Lab Cinco',
+          role: 'Suporte - Presencial',
+          description: 'Atendimento e suporte ao cliente e parceiros do aplicativo Bigou Delivery.'
+        }
+      ]
+    },
+    projects: {
+      title: 'Projetos',
+      notAvailable: 'Este projeto não está disponível publicamente.',
+      items: [
+        {
+          title: 'Estante Mania',
+          link: 'https://github.com/EMarceloCM/Estante-Mania',
+          description: 'Livraria virtual com painel administrativo.',
+          tags: ['Microsserviços', 'RabbitMQ', 'Docker', 'Blazor', '.NET Core', 'SQLServer', 'Git', 'LINQ'],
+          year: '2023'
+        },
+        {
+          title: 'Monitoramento de Concorrência',
+          description: 'Web scraper de diferentes plataformas com relatórios estatísticos por plataforma, cidade e estabelecimento.',
+          tags: ['Electron', 'TypeScript', 'Javascript', 'MySQL', 'Puppeteer', 'Git'],
+          year: '2025'
+        },
+        {
+          title: 'CVRP Algorithms',
+          link: 'https://github.com/EMarceloCM/CVRP-Algorithms',
+          description: 'Heurísticas e meta-heurísticas para o problema de roteamento de veículos com capacidade (CVRP). Dentre as implementações, a metaheurística ALNS foi capaz de otimizar em 4,05% a melhor solução literária conhecida para uma variante do CVRP, sendo uma nova descoberta de rotas para o problema.',
+          tags: ['C#', 'Heurísticas', 'Metaheurísticas', 'Git'],
+          year: '2025'
+        },
+        {
+          title: 'Estações RMI',
+          link: 'https://github.com/EMarceloCM/RMI',
+          description: 'Simulador de estações de controle de áudio utilizando RMI para comunicação entre as estações e o servidor central.',
+          tags: ['Java', 'RMI', 'Git'],
+          year: '2025'
+        }
+      ]
+    },
+    education: {
+      title: 'Educação',
+      items: [
+        {
+          degree: 'Bacharel em Ciência da Computação',
+          institution: 'Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas',
+          period: '2022 — 2025',
+          description: 'Durante o bacharelado desenvolvi projetos práticos em diversas áreas, com destaque para sistemas de heurísticas e metaheurísticas voltadas a otimização de problemas do tipo PRVC. Dentre isso, colaborei para a literatura com uma nova descoberta de rotas para uma variante deste tipo de problema de otimização, utilizando um algoritmo ALNS, otimizando em 4,05% a melhor solução literária conhecida até então em 100% das execuções.'
+        },
+        {
+          degree: 'Técnico em Informática',
+          institution: 'Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas',
+          period: '2018 — mar de 2021',
+          description: 'Curso técnico integrado ao ensino médio. Atuei no desenvolvimento de sistemas web, jogos e banco de dados. Desenvolvi experiências práticas com engenharia de software, montagem e manutenção de computadores e projetos para GameJam.'
+        }
+      ]
+    },
+    skills: {
+      title: 'Habilidades',
+      heading: 'Habilidades & Idiomas',
+      categories: [
+        {
+          category: 'Linguagens',
+          items: ['TypeScript', 'JavaScript', 'C#', 'SQL']
+        },
+        {
+          category: 'Frameworks',
+          items: ['Node.js', '.NET', 'Angular', 'Express', 'React', 'Blazor', 'Electron', 'EFCore', 'Dapper', 'Sequelize', 'Puppeteer']
+        },
+        {
+          category: 'Ferramentas',
+          items: ['Git', 'Jira', 'MySql', 'Redis', 'GraphQL', 'RabbitMQ', 'Docker', 'Unity']
+        },
+        {
+          category: 'Cloud',
+          items: ['AWS', 'Azure', 'CI/CD']
+        }
+      ],
+      languages: {
+        heading: 'Idiomas',
+        items: [
+          {
+            language: 'Português',
+            level: 'Nativo'
+          },
+          {
+            language: 'Inglês',
+            level: 'Avançado'
+          },
+          {
+            language: 'Italiano',
+            level: 'Iniciante'
+          }
+        ]
+      }
+    },
+    contact: {
+      title: 'Contato',
+      heading: 'Vamos Trabalhar Juntos.',
+      email: 'edmylsonmarcelo3@gmail.com',
+      github: 'https://github.com/EMarceloCM',
+      linkedin: 'https://linkedin.com/in/edmylson',
+      copyright: 'Todos os direitos reservados',
+      designNote: 'Projetado com intenção editorial'
+    }
+  },
+  en: {
+    nav: ['About', 'Experience', 'Projects', 'Education', 'Skills', 'Contact'],
+    hero: {
+      title: 'Full-Stack Developer · Back-end Specialist',
+      description: 'I have 2 years of experience working with applications that actively serve tens of thousands of users. I build robust and scalable web, desktop, and mobile systems.'
+    },
+    about: {
+      title: 'About',
+      content: [
+        'I am a software engineer with a deep appreciation for programming logic and robust architecture. Since I was 16, I have been building web, desktop, and mobile systems mainly with JavaScript, TypeScript, and C#.',
+        'I have a comprehensive experience in the entire development cycle, including cross-platform applications, APIs, internal systems, automations, and cloud infrastructure.'
+      ]
+    },
+    experience: {
+      title: 'Experience',
+      items: [
+        {
+          period: 'Mar 2025 — Present',
+          company: 'Lab Cinco',
+          role: 'Test Analyst / Developer - Remote',
+          description: 'Testing different types of systems and developing web and desktop applications for internal team use, accelerating and automating internal processes.'
+        },
+        {
+          period: 'Jul 2022 — Mar 2025',
+          company: 'Lab Cinco',
+          role: 'Database Developer - Hybrid',
+          description: 'I mainly collaborated with the automation and optimization of internal processes, data analysis, and user behavior. Development of queries and stored procedures. I developed all the documentation for a database that serves more than 100,000 users.'
+        },
+        {
+          period: 'May 2021 — Jul 2022',
+          company: 'Lab Cinco',
+          role: 'Support - On-site',
+          description: 'Customer and partner support for the Bigou Delivery app.'
+        }
+      ]
+    },
+    projects: {
+      title: 'Projects',
+      notAvailable: 'This project is not publicly available.',
+      items: [
+        {
+          title: 'Estante Mania',
+          link: 'https://github.com/EMarceloCM/Estante-Mania',
+          description: 'Virtual library with administrative panel.',
+          tags: ['Microservices', 'RabbitMQ', 'Docker', 'Blazor', '.NET Core', 'SQL Server', 'Git', 'LINQ'],
+          year: '2023'
+        },
+        {
+          title: 'Competition Monitoring',
+          description: 'Web scraper from different platforms with statistical reports by platform, city, and establishment.',
+          tags: ['Electron', 'TypeScript', 'JavaScript', 'MySQL', 'Puppeteer', 'Git'],
+          year: '2025'
+        },
+        {
+          title: 'CVRP Algorithms',
+          link: 'https://github.com/EMarceloCM/CVRP-Algorithms',
+          description: 'Heuristics and meta-heuristics for the Capacitated Vehicle Routing Problem (CVRP). Among the implementations, the ALNS metaheuristic was able to optimize by 4.05% the best known literary solution for a CVRP variant, being a new route discovery for the problem.',
+          tags: ['C#', 'Heuristics', 'Metaheuristics', 'Git'],
+          year: '2025'
+        },
+        {
+          title: 'RMI Stations',
+          link: 'https://github.com/EMarceloCM/RMI',
+          description: 'Audio control station simulator using RMI for communication between stations and the central server.',
+          tags: ['Java', 'RMI', 'Git'],
+          year: '2025'
+        }
+      ]
+    },
+    education: {
+      title: 'Education',
+      items: [
+        {
+          degree: 'Bachelor in Computer Science',
+          institution: 'Federal Institute of Education, Science and Technology of Southeast Minas',
+          period: '2022 — 2025',
+          description: 'During the bachelor\'s degree, I developed practical projects in various areas, with emphasis on heuristic and meta-heuristic systems aimed at optimizing PRVC-type problems. Among them, I contributed to the literature with a new route discovery for a variant of this optimization problem, using an ALNS algorithm, optimizing the best literary solution known at the time by 4.05% in 100% of the executions.'
+        },
+        {
+          degree: 'Technical in Informatics',
+          institution: 'Federal Institute of Education, Science and Technology of Southeast Minas',
+          period: '2018 — Mar 2021',
+          description: 'Technical course integrated with high school. I worked on the development of web systems, games, and databases. I developed practical experiences with software engineering, computer assembly and maintenance, and GameJam projects.'
+        }
+      ]
+    },
+    skills: {
+      title: 'Skills',
+      heading: 'Skills & Languages',
+      categories: [
+        {
+          category: 'Languages',
+          items: ['TypeScript', 'JavaScript', 'C#', 'SQL']
+        },
+        {
+          category: 'Frameworks',
+          items: ['Node.js', '.NET', 'Angular', 'Express', 'React', 'Blazor', 'Electron', 'EF Core', 'Dapper', 'Sequelize', 'Puppeteer']
+        },
+        {
+          category: 'Tools',
+          items: ['Git', 'Jira', 'MySQL', 'Redis', 'GraphQL', 'RabbitMQ', 'Docker', 'Unity']
+        },
+        {
+          category: 'Cloud',
+          items: ['AWS', 'Azure', 'CI/CD']
+        }
+      ],
+      languages: {
+        heading: 'Languages',
+        items: [
+          {
+            language: 'Portuguese',
+            level: 'Native'
+          },
+          {
+            language: 'English',
+            level: 'Advanced'
+          },
+          {
+            language: 'Italian',
+            level: 'Beginner'
+          }
+        ]
+      }
+    },
+    contact: {
+      title: 'Contact',
+      heading: "Let's Work Together.",
+      email: 'edmylsonmarcelo3@gmail.com',
+      github: 'https://github.com/EMarceloCM',
+      linkedin: 'https://linkedin.com/in/edmylson',
+      copyright: 'All rights reserved',
+      designNote: 'Designed with editorial intent'
+    }
+  }
+};

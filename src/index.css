@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --bg: 0 0% 91%;
+    --text: 202 96% 3%;
+  }
+
+  .dark {
+    --bg: 202 96% 3%;
+    --text: 0 0% 91%;
+  }
+
+  body {
+    @apply bg-bg text-text font-body antialiased selection:bg-accent selection:text-white transition-colors;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-normal;
+  }
+}
