@@ -35,8 +35,7 @@ export const translations = {
     about: {
       title: 'Sobre',
       content: [
-        'Engenheiro de software com profundo gosto por lógica de programação e arquitetura robusta. Desde os 16 anos, venho construindo sistemas web, desktop e mobile com JavaScript, TypeScript e C# majoritariamente.',
-        'Experiência abrangente em todo o ciclo de desenvolvimento, incluindo aplicativos multiplataforma, APIs, sistemas internos, automações e infraestrutura cloud.'
+        'Engenheiro de software com profundo gosto por lógica de programação e construção de sistemas robustos e escaláveis. Atuo com .NET e Node.js principalmente, utilizando dos principais frameworks do mercado. Possuo experiência em todo o ciclo de desenvolvimento de software, incluindo APIs, sistemas internos, aplicativos mobile e desktop multiplataformas, automações e infraestrutura cloud. Gosto de desafios que me motivem a estudar e aprender diariamente.'
       ]
     },
     experience: {
@@ -122,7 +121,7 @@ export const translations = {
         },
         {
           category: 'Frameworks',
-          items: ['Node.js', '.NET', 'Angular', 'Express', 'React', 'Blazor', 'Electron', 'EFCore', 'Dapper', 'Sequelize', 'Puppeteer']
+          items: ['Node.js', '.NET', 'Angular', 'Express', 'React', 'Blazor', 'Electron', 'EFCore', 'Dapper', 'Identity', 'Sequelize', 'Puppeteer']
         },
         {
           category: 'Ferramentas',
@@ -170,8 +169,7 @@ export const translations = {
     about: {
       title: 'About',
       content: [
-        'I am a software engineer with a deep appreciation for programming logic and robust architecture. Since I was 16, I have been building web, desktop, and mobile systems mainly with JavaScript, TypeScript, and C#.',
-        'I have a comprehensive experience in the entire development cycle, including cross-platform applications, APIs, internal systems, automations, and cloud infrastructure.'
+        'I am a software engineer with a deep appreciation for programming logic and building robust, scalable systems. I work primarily with .NET and Node.js, using the leading frameworks on the market. I have experience in the entire software development cycle, including APIs, internal systems, multi-platform mobile and desktop applications, automation, and cloud infrastructure. I enjoy challenges that motivate me to study and learn every day.'
       ]
     },
     experience: {
@@ -257,7 +255,7 @@ export const translations = {
         },
         {
           category: 'Frameworks',
-          items: ['Node.js', '.NET', 'Angular', 'Express', 'React', 'Blazor', 'Electron', 'EF Core', 'Dapper', 'Sequelize', 'Puppeteer']
+          items: ['Node.js', '.NET', 'Angular', 'Express', 'React', 'Blazor', 'Electron', 'EF Core', 'Dapper', 'Identity', 'Sequelize', 'Puppeteer']
         },
         {
           category: 'Tools',
