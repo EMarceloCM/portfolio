@@ -45,7 +45,7 @@ export function ExperienceSection() {
                 <h4 className="font-body text-accent font-medium mb-3">
                   {exp.role}
                 </h4>
-                <p className="font-body text-text/70 dark:text-text/70 leading-relaxed text-lg">
+                <p className="font-body text-text/70 dark:text-text/70 leading-relaxed text-lg whitespace-pre-line">
                   {exp.description}
                 </p>
               </div>
