@@ -72,6 +72,13 @@ export const translations = {
       notAvailable: 'Este projeto não está disponível publicamente.',
       items: [
         {
+          title: 'Ping — App de Entregas',
+          link: 'https://emarcelocm.github.io/delivery-driver-landing-page/',
+          description: 'Aplicativo universal de entregas que unifica todas as plataformas de delivery em um único app para entregadores. Landing page de apresentação com telas reais do app, seção de recursos, financeiro com saque via Pix e fluxo de como funciona.',
+          tags: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'MySQL', 'Prisma', 'JWT'],
+          year: '2026'
+        },
+        {
           title: 'Encurtador de URLs',
           description: 'Plataforma de encurtamento de URLs com painel de gestão e métricas. Conta com autenticação JWT, organização de links por tags, geração de QR Code e dashboards de acesso com gráficos por período, geolocalização e dispositivo.',
           tags: ['Vue.js', 'Vuex', 'Vuetify', 'Node.js', 'Express', 'MySQL', 'JWT', 'Docker', 'Bitbucket'],
@@ -223,6 +230,13 @@ export const translations = {
       title: 'Projects',
       notAvailable: 'This project is not publicly available.',
       items: [
+        {
+          title: 'Ping — Delivery App',
+          link: 'https://emarcelocm.github.io/delivery-driver-landing-page/',
+          description: 'Universal delivery app that unifies all delivery platforms into a single app for couriers. Presentation landing page with real app screens, features section, earnings with Pix withdrawal, and a how-it-works flow.',
+          tags: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'MySQL', 'Prisma', 'JWT'],
+          year: '2026'
+        },
         {
           title: 'URL Shortener',
           description: 'URL shortening platform with a management panel and analytics. Features JWT authentication, link organization by tags, QR Code generation, and access dashboards with charts by period, geolocation, and device.',
