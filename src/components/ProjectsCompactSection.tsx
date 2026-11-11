@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useLanguage, translations } from '../contexts/LanguageContext';
-import { ExternalLink } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 
 export function ProjectsCompactSection() {
   const { language } = useLanguage();
@@ -11,10 +11,42 @@ export function ProjectsCompactSection() {
   const { ref, isInView, containerVariants, itemVariants } =
   useScrollAnimation();
   const [modalMessage, setModalMessage] = useState<string | null>(null);
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
   const handleProjectClick = (link?: string) => {
     if (link) window.open(link, '_blank');
     else setModalMessage(t.projects.notAvailable);
+  };
+
+  const updateArrows = useCallback(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 1);
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 1);
+  }, []);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    updateArrows();
+    el.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    return () => {
+      el.removeEventListener('scroll', updateArrows);
+      window.removeEventListener('resize', updateArrows);
+    };
+  }, [updateArrows, projects.length]);
+
+  // One click advances exactly one column: card width plus the grid gap.
+  const scrollByColumn = (direction: 1 | -1) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const card = el.firstElementChild as HTMLElement | null;
+    const gap = parseFloat(getComputedStyle(el).columnGap) || 0;
+    const step = card ? card.offsetWidth + gap : el.clientWidth / 2;
+    el.scrollBy({ left: direction * step, behavior: 'smooth' });
   };
 
   return (
@@ -37,14 +69,35 @@ export function ProjectsCompactSection() {
           <h2 className="font-body uppercase tracking-widest text-sm font-semibold">
             {t.projects.title}
           </h2>
+
+          <div className="flex items-center gap-2 ml-auto">
+            <button
+              type="button"
+              onClick={() => scrollByColumn(-1)}
+              disabled={!canScrollLeft}
+              className="p-2 border border-text/20 rounded-full text-text/70 hover:text-accent hover:border-accent disabled:opacity-25 disabled:pointer-events-none transition-colors duration-300"
+              aria-label="Previous projects">
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollByColumn(1)}
+              disabled={!canScrollRight}
+              className="p-2 border border-text/20 rounded-full text-text/70 hover:text-accent hover:border-accent disabled:opacity-25 disabled:pointer-events-none transition-colors duration-300"
+              aria-label="Next projects">
+              <ChevronRight size={18} />
+            </button>
+          </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div
+          ref={scrollerRef}
+          className="grid grid-rows-2 grid-flow-col auto-cols-[100%] sm:auto-cols-[calc((100%-1.5rem)/2)] md:auto-cols-[calc((100%-2rem)/2)] gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           {projects.map((project, idx) =>
           <motion.div
             key={idx}
             variants={itemVariants}
-            className="p-6 md:p-8 bg-bg border-l-2 border-accent hover:bg-text/5 transition-colors duration-300 flex flex-col h-full">
+            className="snap-start p-6 md:p-8 bg-bg border-l-2 border-accent hover:bg-text/5 transition-colors duration-300 flex flex-col h-full">
 
               <div className="flex justify-between items-start mb-4">
                 <h3 className="font-heading text-2xl md:text-3xl group-hover:text-accent transition-colors flex items-center gap-2">

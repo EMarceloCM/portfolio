@@ -36,20 +36,26 @@ export const translations = {
   pt: {
     nav: ['Sobre', 'Experiência', 'Projetos', 'Educação', 'Habilidades', 'Contato'],
     hero: {
-      title: 'Desenvolvedor Full-Stack · Especialista Back-end · PJ',
-      description: 'Tenho 2 anos de experiência atuando com aplicações que atendem dezenas de milhares de usuários ativamente. Construo sistemas web, desktop e mobile robustos e escaláveis.'
+      title: 'Desenvolvedor Full-Stack · PJ',
+      description: 'Tenho 2+ anos de experiência profissional com diferentes aplicações que atendem dezenas de milhares de usuários ativamente, utilizando dos principais frameworks do mercado e atendendo a diversos clientes.'
     },
     about: {
       title: 'Sobre',
       content: [
-        'Engenheiro de software com profundo gosto por lógica de programação e construção de sistemas robustos e escaláveis. Atuo com .NET e Node.js principalmente, utilizando dos principais frameworks do mercado. Possuo experiência em todo o ciclo de desenvolvimento de software, incluindo APIs, sistemas internos, aplicativos mobile e desktop multiplataformas, automações e infraestrutura cloud. Gosto de desafios que me motivem a estudar e aprender diariamente.'
+        'Engenheiro de software atuante em todo o ciclo de desenvolvimento, incluindo APIs, interfaces, sistemas internos, aplicativos mobile e desktop multiplataformas, containers, automações e infraestrutura cloud. Atendi a diversos clientes ao longo desses anos em diversos setores, adquirindo ampla experiência. Possuo profundo gosto por lógica de programação e pela construção de sistemas robustos e escaláveis, além de desafios que me motivem a estudar e aprender diariamente.'
       ]
     },
     experience: {
       title: 'Experiência',
       items: [
         {
-          period: 'mar de 2025 — presente',
+          period: 'mai de 2026 — presente',
+          company: 'Lab Cinco',
+          role: 'Desenvolvedor Full Stack',
+          description: 'Responsável pela criação de novas soluções e pela manutenção de sistemas já existentes, garantindo desempenho, escalabilidade e qualidade de código. Atuo no desenvolvimento de aplicações web, desktop e mobile, utilizando tecnologias como Node.js, NestJS, Angular, Vue.js, Vuex, Electron e Titanium, criando interfaces modernas, APIs robustas e soluções multiplataforma alinhadas às necessidades do negócio.\n\nPrincipais atividades:\n\n- Desenvolvimento de novos sistemas e funcionalidades.\n- Manutenção corretiva, evolutiva e preventiva de aplicações existentes.\n- Desenvolvimento e integração de APIs REST.\n- Criação e manutenção de aplicações web com Angular, Vue.js e React.\n- Desenvolvimento de aplicações desktop multiplataforma com Electron.\n- Manutenção e evolução de aplicações mobile desenvolvidas com Titanium.\n- Otimização de desempenho, correção de bugs e refatoração de código.\n- Participação na definição de arquiteturas e soluções técnicas.\n- Colaboração com equipes multidisciplinares durante todo o ciclo de desenvolvimento.\n- Análise de requisitos e implementação de melhorias contínuas nos sistemas.'
+        },
+        {
+          period: 'mar de 2025 — mai de 2026',
           company: 'Lab Cinco',
           role: 'Analista de Testes / Desenvolvedor - Remoto',
           description: 'Aplicação de testes em diferentes tipos de sistemas e desenvolvimento de aplicações web e desktop para uso interno da equipe, acelerando e automatizando processos internos.'
@@ -62,7 +68,7 @@ export const translations = {
         },
         {
           period: 'mai de 2021 — jul de 2022',
-          company: 'Lab Cinco',
+          company: 'Bigou Delivery',
           role: 'Suporte - Presencial',
           description: 'Atendimento e suporte ao cliente e parceiros do aplicativo Bigou Delivery.'
         }
@@ -76,6 +82,25 @@ export const translations = {
           title: 'Language Learning Routine',
           description: 'App Android (Linguas Discens) que organiza o estudo de vários idiomas em torno de uma meta semanal de horas: calcula a meta do dia, redistribui o que ficou para trás e acompanha cada idioma até a meta final. Conta com widgets e notificações com ações em segundo plano, gamificação com XP, níveis, conquistas e missões, provas a cada etapa de horas e dados 100% locais com backup completo e migrações versionadas.',
           tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
+          year: '2026'
+        },
+        {
+          title: 'Ping — App de Entregas',
+          link: 'https://emarcelocm.github.io/delivery-driver-landing-page/',
+          description: 'Aplicativo universal de entregas que unifica todas as plataformas de delivery em um único app para entregadores. Landing page de apresentação com telas reais do app, seção de recursos, financeiro com saque via Pix e fluxo de como funciona.',
+          tags: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'MySQL', 'Prisma', 'JWT'],
+          year: '2026'
+        },
+        {
+          title: 'Encurtador de URLs',
+          description: 'Plataforma de encurtamento de URLs com painel de gestão e métricas. Conta com autenticação JWT, organização de links por tags, geração de QR Code e dashboards de acesso com gráficos por período, geolocalização e dispositivo.',
+          tags: ['Vue.js', 'Vuex', 'Vuetify', 'Node.js', 'Express', 'MySQL', 'JWT', 'Docker', 'Bitbucket'],
+          year: '2026'
+        },
+        {
+          title: 'Site Paróquia do Rosário',
+          description: 'Site institucional de uma paróquia com área administrativa integrada a uma API REST. Reúne páginas de comunidades, horários de missa, sacramentos, agenda de eventos e notícias com paginação, além de um painel administrativo.',
+          tags: ['Next.js', 'React.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'API REST', 'JWT', 'PM2'],
           year: '2026'
         },
         {
@@ -140,11 +165,11 @@ export const translations = {
         },
         {
           category: 'Frameworks',
-          items: ['Node.js', '.NET', 'Angular', 'Express', 'React', 'Blazor', 'Electron', 'EFCore', 'Dapper', 'Identity', 'Sequelize', 'Puppeteer']
+          items: ['Node.js', 'NestJS', '.NET', 'Angular', 'AngularJS', 'Vue.js', 'Vuex', 'Nuxt.js', 'React.js', 'Express', 'Blazor', 'Electron.js', 'Titanium Mobile', 'EFCore', 'Dapper', 'Identity', 'Sequelize', 'Puppeteer']
         },
         {
           category: 'Ferramentas',
-          items: ['Git', 'Jira', 'MySql', 'Redis', 'GraphQL', 'RabbitMQ', 'Docker', 'Unity']
+          items: ['Git', 'Bitbucket', 'JIRA', 'API REST', 'MySql', 'Redis', 'GraphQL', 'RabbitMQ', 'Docker', 'Unity']
         },
         {
           category: 'Cloud',
@@ -183,19 +208,25 @@ export const translations = {
     nav: ['About', 'Experience', 'Projects', 'Education', 'Skills', 'Contact'],
     hero: {
       title: 'Full-Stack Developer · Back-end Specialist',
-      description: 'I have 2 years of experience working with applications that actively serve tens of thousands of users. I build robust and scalable web, desktop, and mobile systems.'
+      description: 'I have 2+ years of professional experience with a range of applications that actively serve tens of thousands of users, using the leading frameworks on the market and serving a diverse client base.'
     },
     about: {
       title: 'About',
       content: [
-        'I am a software engineer with a deep appreciation for programming logic and building robust, scalable systems. I work primarily with .NET and Node.js, using the leading frameworks on the market. I have experience in the entire software development cycle, including APIs, internal systems, multi-platform mobile and desktop applications, automation, and cloud infrastructure. I enjoy challenges that motivate me to study and learn every day.'
+        'I am a software engineer working across the entire development cycle, including APIs, interfaces, internal systems, multi-platform mobile and desktop applications, containers, automation, and cloud infrastructure. Over these years I have served clients across many different sectors, gaining broad experience. I have a deep appreciation for programming logic and for building robust, scalable systems, as well as for challenges that motivate me to study and learn every day.'
       ]
     },
     experience: {
       title: 'Experience',
       items: [
         {
-          period: 'Mar 2025 — Present',
+          period: 'May 2026 — Present',
+          company: 'Lab Cinco',
+          role: 'Full Stack Developer',
+          description: 'Responsible for developing new solutions and maintaining existing systems, ensuring performance, scalability, and code quality. I work on web, desktop, and mobile applications using technologies such as Node.js, NestJS, Angular, Vue.js, Vuex, Electron, and Titanium, building modern user interfaces, robust APIs, and cross-platform solutions aligned with business needs.\n\nKey Responsibilities:\n\n- Developing new systems and features.\n- Performing corrective, adaptive, and preventive maintenance on existing applications.\n- Designing, developing, and integrating RESTful APIs.\n- Building and maintaining web applications with Angular and Vue.js.\n- Developing cross-platform desktop applications with Electron.\n- Maintaining and enhancing legacy mobile applications built with Titanium.\n- Optimizing application performance, troubleshooting issues, and refactoring code.\n- Participating in the definition of software architecture and technical solutions.\n- Collaborating with cross-functional teams throughout the entire development lifecycle.\n- Analyzing requirements and implementing continuous improvements across systems.'
+        },
+        {
+          period: 'Mar 2025 — May 2026',
           company: 'Lab Cinco',
           role: 'Test Analyst / Developer - Remote',
           description: 'Testing different types of systems and developing web and desktop applications for internal team use, accelerating and automating internal processes.'
@@ -208,7 +239,7 @@ export const translations = {
         },
         {
           period: 'May 2021 — Jul 2022',
-          company: 'Lab Cinco',
+          company: 'Bigou Delivery',
           role: 'Support - On-site',
           description: 'Customer and partner support for the Bigou Delivery app.'
         }
@@ -222,6 +253,25 @@ export const translations = {
           title: 'Language Learning Routine',
           description: 'Android app (Linguas Discens) that organizes the study of several languages around a weekly hour goal: it calculates the daily goal, redistributes what was left behind, and tracks each language up to its final goal. It features home screen widgets and notifications with background actions, gamification with XP, levels, achievements, and missions, exams at each hour milestone, and 100% local data with full backup and versioned migrations.',
           tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
+          year: '2026'
+        },
+        {
+          title: 'Ping — Delivery App',
+          link: 'https://emarcelocm.github.io/delivery-driver-landing-page/',
+          description: 'Universal delivery app that unifies all delivery platforms into a single app for couriers. Presentation landing page with real app screens, features section, earnings with Pix withdrawal, and a how-it-works flow.',
+          tags: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'MySQL', 'Prisma', 'JWT'],
+          year: '2026'
+        },
+        {
+          title: 'URL Shortener',
+          description: 'URL shortening platform with a management panel and analytics. Features JWT authentication, link organization by tags, QR Code generation, and access dashboards with charts by period, geolocation, and device.',
+          tags: ['Vue.js', 'Vuex', 'Vuetify', 'Node.js', 'Express', 'MySQL', 'JWT', 'Docker', 'Bitbucket'],
+          year: '2026'
+        },
+        {
+          title: 'Rosário Parish Website',
+          description: 'Institutional website for a parish with an admin area integrated with a REST API. It brings together pages for communities, mass schedules, sacraments, event calendar, and paginated news, plus a full admin panel.',
+          tags: ['Next.js', 'React.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'REST API', 'JWT', 'PM2'],
           year: '2026'
         },
         {
@@ -286,11 +336,11 @@ export const translations = {
         },
         {
           category: 'Frameworks',
-          items: ['Node.js', '.NET', 'Angular', 'Express', 'React', 'Blazor', 'Electron', 'EF Core', 'Dapper', 'Identity', 'Sequelize', 'Puppeteer']
+          items: ['Node.js', 'NestJS', '.NET', 'Angular', 'AngularJS', 'Vue.js', 'Vuex', 'Nuxt.js', 'React.js', 'Express', 'Blazor', 'Electron.js', 'Titanium Mobile', 'EF Core', 'Dapper', 'Identity', 'Sequelize', 'Puppeteer']
         },
         {
           category: 'Tools',
-          items: ['Git', 'Jira', 'MySQL', 'Redis', 'GraphQL', 'RabbitMQ', 'Docker', 'Unity']
+          items: ['Git', 'Bitbucket', 'JIRA', 'REST API', 'MySQL', 'Redis', 'GraphQL', 'RabbitMQ', 'Docker', 'Unity']
         },
         {
           category: 'Cloud',
@@ -329,19 +379,25 @@ export const translations = {
     nav: ['Chi sono', 'Esperienza', 'Progetti', 'Formazione', 'Competenze', 'Contatti'],
     hero: {
       title: 'Sviluppatore Full-Stack · Specialista Back-end',
-      description: 'Ho 2 anni di esperienza con applicazioni che servono attivamente decine di migliaia di utenti. Realizzo sistemi web, desktop e mobile robusti e scalabili.'
+      description: 'Ho più di 2 anni di esperienza professionale con diverse applicazioni che servono attivamente decine di migliaia di utenti, utilizzando i principali framework del mercato e lavorando per numerosi clienti.'
     },
     about: {
       title: 'Chi sono',
       content: [
-        'Sono un ingegnere del software con una profonda passione per la logica di programmazione e per la costruzione di sistemi robusti e scalabili. Lavoro principalmente con .NET e Node.js, utilizzando i principali framework del mercato. Ho esperienza in tutto il ciclo di sviluppo del software, inclusi API, sistemi interni, applicazioni mobile e desktop multipiattaforma, automazioni e infrastruttura cloud. Mi piacciono le sfide che mi motivano a studiare e imparare ogni giorno.'
+        'Sono un ingegnere del software attivo in tutto il ciclo di sviluppo, inclusi API, interfacce, sistemi interni, applicazioni mobile e desktop multipiattaforma, container, automazioni e infrastruttura cloud. Nel corso di questi anni ho lavorato per numerosi clienti in diversi settori, acquisendo un\'ampia esperienza. Ho una profonda passione per la logica di programmazione e per la costruzione di sistemi robusti e scalabili, oltre che per le sfide che mi motivano a studiare e imparare ogni giorno.'
       ]
     },
     experience: {
       title: 'Esperienza',
       items: [
         {
-          period: 'mar 2025 — presente',
+          period: 'mag 2026 — presente',
+          company: 'Lab Cinco',
+          role: 'Sviluppatore Full Stack',
+          description: 'Responsabile dello sviluppo di nuove soluzioni e della manutenzione dei sistemi esistenti, garantendo prestazioni, scalabilità e qualità del codice. Lavoro allo sviluppo di applicazioni web, desktop e mobile con tecnologie come Node.js, NestJS, Angular, Vue.js, Vuex, Electron e Titanium, creando interfacce moderne, API robuste e soluzioni multipiattaforma allineate alle esigenze del business.\n\nAttività principali:\n\n- Sviluppo di nuovi sistemi e funzionalità.\n- Manutenzione correttiva, evolutiva e preventiva delle applicazioni esistenti.\n- Sviluppo e integrazione di API REST.\n- Creazione e manutenzione di applicazioni web con Angular, Vue.js e React.\n- Sviluppo di applicazioni desktop multipiattaforma con Electron.\n- Manutenzione ed evoluzione di applicazioni mobile sviluppate con Titanium.\n- Ottimizzazione delle prestazioni, correzione di bug e refactoring del codice.\n- Partecipazione alla definizione di architetture e soluzioni tecniche.\n- Collaborazione con team multidisciplinari durante tutto il ciclo di sviluppo.\n- Analisi dei requisiti e implementazione di miglioramenti continui nei sistemi.'
+        },
+        {
+          period: 'mar 2025 — mag 2026',
           company: 'Lab Cinco',
           role: 'Analista di Test / Sviluppatore - Da remoto',
           description: 'Test di diversi tipi di sistemi e sviluppo di applicazioni web e desktop per uso interno del team, accelerando e automatizzando i processi interni.'
@@ -354,7 +410,7 @@ export const translations = {
         },
         {
           period: 'mag 2021 — lug 2022',
-          company: 'Lab Cinco',
+          company: 'Bigou Delivery',
           role: 'Supporto - In sede',
           description: 'Assistenza e supporto a clienti e partner dell\'app Bigou Delivery.'
         }
@@ -368,6 +424,25 @@ export const translations = {
           title: 'Language Learning Routine',
           description: 'App Android (Linguas Discens) che organizza lo studio di più lingue attorno a un obiettivo settimanale di ore: calcola l\'obiettivo del giorno, ridistribuisce ciò che è rimasto indietro e segue ogni lingua fino all\'obiettivo finale. Include widget e notifiche con azioni in background, gamification con XP, livelli, obiettivi e missioni, esami a ogni traguardo di ore e dati 100% locali con backup completo e migrazioni versionate.',
           tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
+          year: '2026'
+        },
+        {
+          title: 'Ping — App di Consegne',
+          link: 'https://emarcelocm.github.io/delivery-driver-landing-page/',
+          description: 'App di consegne universale che unifica tutte le piattaforme di delivery in un\'unica app per i corrieri. Landing page di presentazione con schermate reali dell\'app, sezione delle funzionalità, area finanziaria con prelievo tramite Pix e flusso di funzionamento.',
+          tags: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'MySQL', 'Prisma', 'JWT'],
+          year: '2026'
+        },
+        {
+          title: 'Accorciatore di URL',
+          description: 'Piattaforma per accorciare URL con pannello di gestione e metriche. Include autenticazione JWT, organizzazione dei link per tag, generazione di QR Code e dashboard degli accessi con grafici per periodo, geolocalizzazione e dispositivo.',
+          tags: ['Vue.js', 'Vuex', 'Vuetify', 'Node.js', 'Express', 'MySQL', 'JWT', 'Docker', 'Bitbucket'],
+          year: '2026'
+        },
+        {
+          title: 'Sito Parrocchia del Rosario',
+          description: 'Sito istituzionale di una parrocchia con area amministrativa integrata a un\'API REST. Riunisce pagine delle comunità, orari delle messe, sacramenti, calendario degli eventi e notizie con paginazione, oltre a un pannello di amministrazione.',
+          tags: ['Next.js', 'React.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'API REST', 'JWT', 'PM2'],
           year: '2026'
         },
         {
@@ -432,11 +507,11 @@ export const translations = {
         },
         {
           category: 'Framework',
-          items: ['Node.js', '.NET', 'Angular', 'Express', 'React', 'Blazor', 'Electron', 'EF Core', 'Dapper', 'Identity', 'Sequelize', 'Puppeteer']
+          items: ['Node.js', 'NestJS', '.NET', 'Angular', 'AngularJS', 'Vue.js', 'Vuex', 'Nuxt.js', 'React.js', 'Express', 'Blazor', 'Electron.js', 'Titanium Mobile', 'EF Core', 'Dapper', 'Identity', 'Sequelize', 'Puppeteer']
         },
         {
           category: 'Strumenti',
-          items: ['Git', 'Jira', 'MySQL', 'Redis', 'GraphQL', 'RabbitMQ', 'Docker', 'Unity']
+          items: ['Git', 'Bitbucket', 'JIRA', 'API REST', 'MySQL', 'Redis', 'GraphQL', 'RabbitMQ', 'Docker', 'Unity']
         },
         {
           category: 'Cloud',
