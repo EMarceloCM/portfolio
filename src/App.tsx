@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
 import { PortfolioPage } from './pages/PortfolioPage';
-import { LanguageProvider } from './contexts/LanguageContext';
+import { LanguageProvider, Language, nextLanguage } from './contexts/LanguageContext';
 
 export function App() {
   const [isDark, setIsDark] = useState(false);
-  const [language, setLanguage] = useState<'en' | 'pt'>('pt');
+  const [language, setLanguage] = useState<Language>('pt');
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   useEffect(() => {
     if (isDark) {
@@ -21,7 +25,7 @@ export function App() {
 
   const toggleLanguage = () => {
     console.log('Toggling language');
-    setLanguage(language === 'en' ? 'pt' : 'en');
+    setLanguage(nextLanguage(language));
   };
 
   return (

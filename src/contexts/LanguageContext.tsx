@@ -1,6 +1,13 @@
 import React, { createContext, useContext } from 'react';
 
-export type Language = 'en' | 'pt';
+export type Language = 'pt' | 'en' | 'it';
+
+// Ordem em que o botão de idioma alterna entre eles.
+export const languageOrder: Language[] = ['pt', 'en', 'it'];
+
+export function nextLanguage(language: Language): Language {
+  return languageOrder[(languageOrder.indexOf(language) + 1) % languageOrder.length];
+}
 
 interface LanguageContextType {
   language: Language;
@@ -66,6 +73,12 @@ export const translations = {
       notAvailable: 'Este projeto não está disponível publicamente.',
       items: [
         {
+          title: 'Language Learning Routine',
+          description: 'App Android (Linguas Discens) que organiza o estudo de vários idiomas em torno de uma meta semanal de horas: calcula a meta do dia, redistribui o que ficou para trás e acompanha cada idioma até a meta final. Conta com widgets e notificações com ações em segundo plano, gamificação com XP, níveis, conquistas e missões, provas a cada etapa de horas e dados 100% locais com backup completo e migrações versionadas.',
+          tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
+          year: '2026'
+        },
+        {
           title: 'Estante Mania',
           link: 'https://github.com/EMarceloCM/Estante-Mania',
           description: 'Livraria virtual com painel administrativo.',
@@ -91,6 +104,12 @@ export const translations = {
           description: 'Simulador de estações de controle de áudio utilizando RMI para comunicação entre as estações e o servidor central.',
           tags: ['Java', 'RMI', 'Git'],
           year: '2025'
+        },
+        {
+          title: 'Palpites CS2',
+          description: 'Site para um grupo de amigos do Discord dar palpites com pontos virtuais (sem valor real) em partidas profissionais de CS2. Partidas e resultados vêm da Liquipedia, com odds calculadas a partir do ranking oficial da Valve (VRS), liquidação automática, ranking por temporada, loja de personalização de perfil e simulador de Major com Pick\'Em. Login pelo Discord e hospedagem 100% gratuita.',
+          tags: ['Next.js', 'React', 'TypeScript', 'PostgreSQL', 'Drizzle', 'Better Auth', 'Tailwind', 'Vercel', 'Vitest', 'Git'],
+          year: '2026'
         }
       ]
     },
@@ -145,7 +164,7 @@ export const translations = {
           },
           {
             language: 'Italiano',
-            level: 'Iniciante'
+            level: 'Intermediário'
           }
         ]
       }
@@ -200,6 +219,12 @@ export const translations = {
       notAvailable: 'This project is not publicly available.',
       items: [
         {
+          title: 'Language Learning Routine',
+          description: 'Android app (Linguas Discens) that organizes the study of several languages around a weekly hour goal: it calculates the daily goal, redistributes what was left behind, and tracks each language up to its final goal. It features home screen widgets and notifications with background actions, gamification with XP, levels, achievements, and missions, exams at each hour milestone, and 100% local data with full backup and versioned migrations.',
+          tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
+          year: '2026'
+        },
+        {
           title: 'Estante Mania',
           link: 'https://github.com/EMarceloCM/Estante-Mania',
           description: 'Virtual library with administrative panel.',
@@ -225,6 +250,12 @@ export const translations = {
           description: 'Audio control station simulator using RMI for communication between stations and the central server.',
           tags: ['Java', 'RMI', 'Git'],
           year: '2025'
+        },
+        {
+          title: 'CS2 Predictions',
+          description: 'Website for a group of Discord friends to make predictions with virtual points (no real value) on professional CS2 matches. Matches and results come from Liquipedia, with odds calculated from Valve\'s official team ranking (VRS), automatic settlement, seasonal leaderboards, a profile customization shop, and a Major simulator with Pick\'Em. Discord login and 100% free hosting.',
+          tags: ['Next.js', 'React', 'TypeScript', 'PostgreSQL', 'Drizzle', 'Better Auth', 'Tailwind', 'Vercel', 'Vitest', 'Git'],
+          year: '2026'
         }
       ]
     },
@@ -292,6 +323,152 @@ export const translations = {
       linkedin: 'https://linkedin.com/in/edmylson',
       copyright: 'All rights reserved',
       designNote: 'Designed with editorial intent'
+    }
+  },
+  it: {
+    nav: ['Chi sono', 'Esperienza', 'Progetti', 'Formazione', 'Competenze', 'Contatti'],
+    hero: {
+      title: 'Sviluppatore Full-Stack · Specialista Back-end',
+      description: 'Ho 2 anni di esperienza con applicazioni che servono attivamente decine di migliaia di utenti. Realizzo sistemi web, desktop e mobile robusti e scalabili.'
+    },
+    about: {
+      title: 'Chi sono',
+      content: [
+        'Sono un ingegnere del software con una profonda passione per la logica di programmazione e per la costruzione di sistemi robusti e scalabili. Lavoro principalmente con .NET e Node.js, utilizzando i principali framework del mercato. Ho esperienza in tutto il ciclo di sviluppo del software, inclusi API, sistemi interni, applicazioni mobile e desktop multipiattaforma, automazioni e infrastruttura cloud. Mi piacciono le sfide che mi motivano a studiare e imparare ogni giorno.'
+      ]
+    },
+    experience: {
+      title: 'Esperienza',
+      items: [
+        {
+          period: 'mar 2025 — presente',
+          company: 'Lab Cinco',
+          role: 'Analista di Test / Sviluppatore - Da remoto',
+          description: 'Test di diversi tipi di sistemi e sviluppo di applicazioni web e desktop per uso interno del team, accelerando e automatizzando i processi interni.'
+        },
+        {
+          period: 'lug 2022 — mar 2025',
+          company: 'Lab Cinco',
+          role: 'Sviluppatore di Database - Ibrido',
+          description: 'Ho collaborato principalmente all\'automazione e all\'ottimizzazione dei processi interni, all\'analisi dei dati e del comportamento degli utenti. Sviluppo di query e stored procedure. Ho redatto l\'intera documentazione di un database che serve oltre 100.000 utenti.'
+        },
+        {
+          period: 'mag 2021 — lug 2022',
+          company: 'Lab Cinco',
+          role: 'Supporto - In sede',
+          description: 'Assistenza e supporto a clienti e partner dell\'app Bigou Delivery.'
+        }
+      ]
+    },
+    projects: {
+      title: 'Progetti',
+      notAvailable: 'Questo progetto non è disponibile pubblicamente.',
+      items: [
+        {
+          title: 'Language Learning Routine',
+          description: 'App Android (Linguas Discens) che organizza lo studio di più lingue attorno a un obiettivo settimanale di ore: calcola l\'obiettivo del giorno, ridistribuisce ciò che è rimasto indietro e segue ogni lingua fino all\'obiettivo finale. Include widget e notifiche con azioni in background, gamification con XP, livelli, obiettivi e missioni, esami a ogni traguardo di ore e dati 100% locali con backup completo e migrazioni versionate.',
+          tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
+          year: '2026'
+        },
+        {
+          title: 'Estante Mania',
+          link: 'https://github.com/EMarceloCM/Estante-Mania',
+          description: 'Libreria virtuale con pannello di amministrazione.',
+          tags: ['Microservizi', 'RabbitMQ', 'Docker', 'Blazor', '.NET Core', 'SQL Server', 'Git', 'LINQ'],
+          year: '2023'
+        },
+        {
+          title: 'Monitoraggio della Concorrenza',
+          description: 'Web scraper di diverse piattaforme con report statistici per piattaforma, città e attività commerciale.',
+          tags: ['Electron', 'TypeScript', 'JavaScript', 'MySQL', 'Puppeteer', 'Git'],
+          year: '2025'
+        },
+        {
+          title: 'CVRP Algorithms',
+          link: 'https://github.com/EMarceloCM/CVRP-Algorithms',
+          description: 'Euristiche e metaeuristiche per il problema di instradamento dei veicoli con capacità (CVRP). Tra le implementazioni, la metaeuristica ALNS è riuscita a migliorare del 4,05% la migliore soluzione nota in letteratura per una variante del CVRP, rappresentando una nuova scoperta di percorsi per il problema.',
+          tags: ['C#', 'Euristiche', 'Metaeuristiche', 'Git'],
+          year: '2025'
+        },
+        {
+          title: 'Stazioni RMI',
+          link: 'https://github.com/EMarceloCM/RMI',
+          description: 'Simulatore di stazioni di controllo audio che utilizza RMI per la comunicazione tra le stazioni e il server centrale.',
+          tags: ['Java', 'RMI', 'Git'],
+          year: '2025'
+        },
+        {
+          title: 'Pronostici CS2',
+          description: 'Sito per un gruppo di amici su Discord per fare pronostici con punti virtuali (senza valore reale) sulle partite professionistiche di CS2. Partite e risultati provengono da Liquipedia, con quote calcolate dal ranking ufficiale delle squadre di Valve (VRS), liquidazione automatica, classifiche stagionali, negozio di personalizzazione del profilo e simulatore di Major con Pick\'Em. Accesso con Discord e hosting 100% gratuito.',
+          tags: ['Next.js', 'React', 'TypeScript', 'PostgreSQL', 'Drizzle', 'Better Auth', 'Tailwind', 'Vercel', 'Vitest', 'Git'],
+          year: '2026'
+        }
+      ]
+    },
+    education: {
+      title: 'Formazione',
+      items: [
+        {
+          degree: 'Laurea in Informatica',
+          institution: 'Istituto Federale di Educazione, Scienza e Tecnologia del Sud-Est di Minas',
+          period: '2022 — 2025',
+          description: 'Durante la laurea ho sviluppato progetti pratici in diverse aree, con particolare attenzione ai sistemi euristici e metaeuristici per l\'ottimizzazione di problemi di tipo CVRP. Tra questi, ho contribuito alla letteratura con una nuova scoperta di percorsi per una variante di questo problema di ottimizzazione, utilizzando un algoritmo ALNS che ha migliorato del 4,05% la migliore soluzione nota fino ad allora nel 100% delle esecuzioni.'
+        },
+        {
+          degree: 'Diploma Tecnico in Informatica',
+          institution: 'Istituto Federale di Educazione, Scienza e Tecnologia del Sud-Est di Minas',
+          period: '2018 — mar 2021',
+          description: 'Corso tecnico integrato con la scuola superiore. Ho lavorato allo sviluppo di sistemi web, giochi e database. Ho acquisito esperienza pratica in ingegneria del software, assemblaggio e manutenzione di computer e progetti per GameJam.'
+        }
+      ]
+    },
+    skills: {
+      title: 'Competenze',
+      heading: 'Competenze & Lingue',
+      categories: [
+        {
+          category: 'Linguaggi',
+          items: ['TypeScript', 'JavaScript', 'C#', 'SQL']
+        },
+        {
+          category: 'Framework',
+          items: ['Node.js', '.NET', 'Angular', 'Express', 'React', 'Blazor', 'Electron', 'EF Core', 'Dapper', 'Identity', 'Sequelize', 'Puppeteer']
+        },
+        {
+          category: 'Strumenti',
+          items: ['Git', 'Jira', 'MySQL', 'Redis', 'GraphQL', 'RabbitMQ', 'Docker', 'Unity']
+        },
+        {
+          category: 'Cloud',
+          items: ['AWS', 'Azure', 'CI/CD']
+        }
+      ],
+      languages: {
+        heading: 'Lingue',
+        items: [
+          {
+            language: 'Portoghese',
+            level: 'Madrelingua'
+          },
+          {
+            language: 'Inglese',
+            level: 'Avanzato'
+          },
+          {
+            language: 'Italiano',
+            level: 'Principiante'
+          }
+        ]
+      }
+    },
+    contact: {
+      title: 'Contatti',
+      heading: 'Lavoriamo Insieme.',
+      email: 'edmylsonmarcelo3@gmail.com',
+      github: 'https://github.com/EMarceloCM',
+      linkedin: 'https://linkedin.com/in/edmylson',
+      copyright: 'Tutti i diritti riservati',
+      designNote: 'Progettato con intento editoriale'
     }
   }
 };

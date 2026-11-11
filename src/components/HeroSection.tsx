@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MailIcon, GithubIcon, LinkedinIcon, MoonIcon, SunIcon, Globe, Menu, X } from 'lucide-react';
-import { useLanguage, translations } from '../contexts/LanguageContext';
+import { useLanguage, translations, nextLanguage } from '../contexts/LanguageContext';
 
 const navHrefs = ['#about', '#experience', '#projects', '#education', '#skills', '#contact'];
 
@@ -47,7 +47,7 @@ export function HeroSection({ toggleDark, isDark }: { toggleDark: () => void; is
               className="p-2 flex items-center rounded-full hover:bg-text/10 dark:hover:bg-text/10 transition-colors duration-300"
               aria-label="Toggle language">
               <Globe size={20} />
-              <span className="text-xs ml-1">{language === 'en' ? 'PT' : 'EN'}</span>
+              <span className="text-xs ml-1">{nextLanguage(language).toUpperCase()}</span>
             </button>
             <button
               type="button"
