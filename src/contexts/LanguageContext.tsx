@@ -80,7 +80,7 @@ export const translations = {
       items: [
         {
           title: 'Language Learning Routine',
-          description: 'App Android (Linguas Discens) que organiza o estudo de vários idiomas em torno de uma meta semanal de horas: calcula a meta do dia, redistribui o que ficou para trás e acompanha cada idioma até a meta final. Conta com widgets e notificações com ações em segundo plano, gamificação com XP, níveis, conquistas e missões, provas a cada etapa de horas e dados 100% locais com backup completo e migrações versionadas.',
+          description: 'App Android (Linguas Discens) que organiza o estudo de vários idiomas em torno de uma meta semanal de horas: calcula a meta do dia, redistribui o que ficou para trás e acompanha cada idioma até a meta final. Conta com widgets e notificações com ações em segundo plano, gamificação com XP, níveis, conquistas e missões, provas a cada etapa de horas e backup completo com migrações versionadas.',
           tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
           year: '2026'
         },
@@ -132,6 +132,7 @@ export const translations = {
         },
         {
           title: 'Palpites CS2',
+          link: 'https://apostas-do-gabinete.vercel.app',
           description: 'Site para um grupo de amigos do Discord dar palpites com pontos virtuais (sem valor real) em partidas profissionais de CS2. Partidas e resultados vêm da Liquipedia, com odds calculadas a partir do ranking oficial da Valve (VRS), liquidação automática, ranking por temporada, loja de personalização de perfil e simulador de Major com Pick\'Em. Login pelo Discord e hospedagem 100% gratuita.',
           tags: ['Next.js', 'React', 'TypeScript', 'PostgreSQL', 'Drizzle', 'Better Auth', 'Tailwind', 'Vercel', 'Vitest', 'Git'],
           year: '2026'
@@ -251,7 +252,7 @@ export const translations = {
       items: [
         {
           title: 'Language Learning Routine',
-          description: 'Android app (Linguas Discens) that organizes the study of several languages around a weekly hour goal: it calculates the daily goal, redistributes what was left behind, and tracks each language up to its final goal. It features home screen widgets and notifications with background actions, gamification with XP, levels, achievements, and missions, exams at each hour milestone, and 100% local data with full backup and versioned migrations.',
+          description: 'Android app (Linguas Discens) that organizes the study of several languages around a weekly hour goal: it calculates the daily goal, redistributes what was left behind, and tracks each language up to its final goal. It features home screen widgets and notifications with background actions, gamification with XP, levels, achievements, and missions, exams at each hour milestone, and full backup with versioned migrations.',
           tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
           year: '2026'
         },
@@ -303,6 +304,7 @@ export const translations = {
         },
         {
           title: 'CS2 Predictions',
+          link: 'https://apostas-do-gabinete.vercel.app',
           description: 'Website for a group of Discord friends to make predictions with virtual points (no real value) on professional CS2 matches. Matches and results come from Liquipedia, with odds calculated from Valve\'s official team ranking (VRS), automatic settlement, seasonal leaderboards, a profile customization shop, and a Major simulator with Pick\'Em. Discord login and 100% free hosting.',
           tags: ['Next.js', 'React', 'TypeScript', 'PostgreSQL', 'Drizzle', 'Better Auth', 'Tailwind', 'Vercel', 'Vitest', 'Git'],
           year: '2026'
@@ -422,7 +424,7 @@ export const translations = {
       items: [
         {
           title: 'Language Learning Routine',
-          description: 'App Android (Linguas Discens) che organizza lo studio di più lingue attorno a un obiettivo settimanale di ore: calcola l\'obiettivo del giorno, ridistribuisce ciò che è rimasto indietro e segue ogni lingua fino all\'obiettivo finale. Include widget e notifiche con azioni in background, gamification con XP, livelli, obiettivi e missioni, esami a ogni traguardo di ore e dati 100% locali con backup completo e migrazioni versionate.',
+          description: 'App Android (Linguas Discens) che organizza lo studio di più lingue attorno a un obiettivo settimanale di ore: calcola l\'obiettivo del giorno, ridistribuisce ciò che è rimasto indietro e segue ogni lingua fino all\'obiettivo finale. Include widget e notifiche con azioni in background, gamification con XP, livelli, obiettivi e missioni, esami a ogni traguardo di ore e backup completo con migrazioni versionate.',
           tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
           year: '2026'
         },
@@ -474,6 +476,7 @@ export const translations = {
         },
         {
           title: 'Pronostici CS2',
+          link: 'https://apostas-do-gabinete.vercel.app',
           description: 'Sito per un gruppo di amici su Discord per fare pronostici con punti virtuali (senza valore reale) sulle partite professionistiche di CS2. Partite e risultati provengono da Liquipedia, con quote calcolate dal ranking ufficiale delle squadre di Valve (VRS), liquidazione automatica, classifiche stagionali, negozio di personalizzazione del profilo e simulatore di Major con Pick\'Em. Accesso con Discord e hosting 100% gratuito.',
           tags: ['Next.js', 'React', 'TypeScript', 'PostgreSQL', 'Drizzle', 'Better Auth', 'Tailwind', 'Vercel', 'Vitest', 'Git'],
           year: '2026'
