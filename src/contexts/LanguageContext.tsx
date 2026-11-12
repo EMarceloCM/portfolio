@@ -80,6 +80,7 @@ export const translations = {
       items: [
         {
           title: 'Language Learning Routine',
+          link: 'https://emarcelocm.github.io/LLR-Landing-Page/',
           description: 'App Android (Linguas Discens) que organiza o estudo de vários idiomas em torno de uma meta semanal de horas: calcula a meta do dia, redistribui o que ficou para trás e acompanha cada idioma até a meta final. Conta com widgets e notificações com ações em segundo plano, gamificação com XP, níveis, conquistas e missões, provas a cada etapa de horas e backup completo com migrações versionadas.',
           tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
           year: '2026'
@@ -252,6 +253,7 @@ export const translations = {
       items: [
         {
           title: 'Language Learning Routine',
+          link: 'https://emarcelocm.github.io/LLR-Landing-Page/',
           description: 'Android app (Linguas Discens) that organizes the study of several languages around a weekly hour goal: it calculates the daily goal, redistributes what was left behind, and tracks each language up to its final goal. It features home screen widgets and notifications with background actions, gamification with XP, levels, achievements, and missions, exams at each hour milestone, and full backup with versioned migrations.',
           tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
           year: '2026'
@@ -424,6 +426,7 @@ export const translations = {
       items: [
         {
           title: 'Language Learning Routine',
+          link: 'https://emarcelocm.github.io/LLR-Landing-Page/',
           description: 'App Android (Linguas Discens) che organizza lo studio di più lingue attorno a un obiettivo settimanale di ore: calcola l\'obiettivo del giorno, ridistribuisce ciò che è rimasto indietro e segue ogni lingua fino all\'obiettivo finale. Include widget e notifiche con azioni in background, gamification con XP, livelli, obiettivi e missioni, esami a ogni traguardo di ore e backup completo con migrazioni versionate.',
           tags: ['React Native', 'Expo', 'TypeScript', 'SQLite', 'Drizzle', 'Zustand', 'Kotlin', 'Jest', 'Maestro', 'Git'],
           year: '2026'
